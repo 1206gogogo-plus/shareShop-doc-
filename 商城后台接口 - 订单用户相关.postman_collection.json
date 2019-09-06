@@ -1,0 +1,2301 @@
+{
+	"info": {
+		"_postman_id": "6cb3899c-54f3-4a87-9352-3b1fca99e809",
+		"name": "商城后台接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "member",
+			"item": [
+				{
+					"name": "/member/info/add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userInfoId\": 1,\n    \"name\": \"Tom\",\n    \"identityCardType\": 1,\n    \"identityCardNo\": \"46829131896753\",\n    \"phoneNumber\": \"2019041213\",\n    \"email\": \"2019011423@gmai.com\",\n    \"gender\": \"male\",\n    \"birthday\": 690812219000,\n    \"registerTime\": 1551442647000,\n    \"userId\": 1,\n    \"superiorId\": 0,\n    \"isSeller\": 0,\n    \"userMoney\": 0,\n    \"userLogin\": {\n        \"userId\": null,\n        \"username\": \"Tom_temp4\",\n        \"password\": \"12dsdsafa\",\n        \"status\": 1,\n        \"level\": 20\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/info/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"info",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/getDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/info/getDetail?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"info",
+								"getDetail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member/info/getList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/info/getList?status=1&pageindex=0&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"info",
+								"getList"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "1"
+								},
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member/info/search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/info/search?pageindex=0&pagesize=1&identityCardNo=468293896753",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"info",
+								"search"
+							],
+							"query": [
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "1"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"disabled": true
+								},
+								{
+									"key": "identityCardNo",
+									"value": "468293896753"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/modify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tom\",\n    \"identityCardType\": 1,\n    \"identityCardNo\": \"46829112\",\n    \"phoneNumber\": \"13078332783\",\n    \"email\": \"323@gmai.com\",\n    \"gender\": \"male\",\n    \"birthday\": 1690812219000,\n    \"userId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/info/modify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"info",
+								"modify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":4\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/info/delete?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"info",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/ getListBySeller",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/info/getListBySeller?username=hello2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"info",
+								"getListBySeller"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "hello2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/getCountAWeek",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/info/getCountAWeek",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"info",
+								"getCountAWeek"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userAddress",
+			"item": [
+				{
+					"name": "/ member/address/ getListByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/address/getListByUser?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"address",
+								"getListByUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shopcard add collect",
+			"item": [
+				{
+					"name": "/member/shopcart/getListByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/shopcart/getListByUser?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"shopcart",
+								"getListByUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/shopcart/getAmountById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/shopcart/getAmountById?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"shopcart",
+								"getAmountById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/collect/getListByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/collect/getListByUser?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"collect",
+								"getListByUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/ collect/getAmountById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/collect/getAmountById?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"collect",
+								"getAmountById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userlogin",
+			"item": [
+				{
+					"name": "/manager/login/getPhoneCode",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/login/getPhoneCode?phoneCode=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"login",
+								"getPhoneCode"
+							],
+							"query": [
+								{
+									"key": "phoneCode",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/login/getMailCode",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/login/getMailCode?mailCode=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"login",
+								"getMailCode"
+							],
+							"query": [
+								{
+									"key": "mailCode",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/login/out",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/login/out?username=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"login",
+								"out"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/login/in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"mode\":1,\n\"username\":\"111111111\",\n\"password\":\"2222\",\n\"level\":1,\n\"ip\":\"1111111\",\n\"device\":\"1111111111111\",\n\"code\":\"111111\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/login/in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"login",
+								"in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "管理员信息管理",
+			"item": [
+				{
+					"name": "/manager/info/ getList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/info/getList?status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"info",
+								"getList"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/info/add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"chenManage\",\n    \"identityCardType\": 1,\n    \"identityCardNo\": \"347837452224\",\n    \"phoneNumber\": \"18076542387\",\n    \"email\": \"12@gmain.com\",\n    \"gender\": \"male\",\n    \"birthday\": 742825819000,\n    \"userLogin\": {\n        \"userId\": null,\n        \"username\": \"chencheng1\",\n        \"password\": \"123456\",\n        \"status\": 1,\n        \"level\": 20\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/info/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"info",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/info/getDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/info/getDetail?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"info",
+								"getDetail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/info/modify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 80,\n    \"name\": \"Ma\",\n    \"identityCardType\": 1,\n    \"identityCardNo\": \"3478374\",\n    \"phoneNumber\": \"18076542387\",\n    \"email\": \"12@gmain.com\",\n    \"gender\": \"male\",\n    \"birthday\": 742825819000\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/info/modify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"info",
+								"modify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/info/delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/info/delete?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"info",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "管理员分类管理",
+			"item": [
+				{
+					"name": "/manager/class/getList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/class/getList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"class",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/class/add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"level\": 6,\n    \"name\": \"admin\",\n    \"description\": \"1212\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/class/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"class",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/class/modify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\": 9,\n    \"level\": 6,\n    \"name\": \"第9个分类\",\n    \"description\": \"121\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/class/modify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"class",
+								"modify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/class/delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":9\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/class/delete?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"class",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "管理员登录",
+			"item": [
+				{
+					"name": "/manager/login/in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"cc\",\n    \"password\":\"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://10.120.203.64:8080/shareshopDM/manager/login/in",
+							"protocol": "http",
+							"host": [
+								"10",
+								"120",
+								"203",
+								"64"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"login",
+								"in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/login/out",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\": 1,\n    \"level\": \"2\",\n    \"name\": \"accaa\",\n    \"describe\": \"Manage commodity information\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/login/out?username=admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"login",
+								"out"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "admin"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/login/getPhoneCode",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/login/getPhoneCode?phoneCode=1111111111111",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"login",
+								"getPhoneCode"
+							],
+							"query": [
+								{
+									"key": "phoneCode",
+									"value": "1111111111111"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/manager/login/getMailCode",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userInfoId\": 4,\n            \"name\": \"Tom\",\n            \"identityCardType\": 1,\n            \"identityCardNo\": \"468293896753\",\n            \"phoneNumber\": \"13078332783\",\n            \"email\": \"323@gmai.com\",\n            \"gender\": \"male\",\n            \"birthday\": 690812219000,\n            \"registerTime\": 1551442647000,\n            \"userId\": 1,\n            \"superiorId\": 0,\n            \"isSeller\": 0,\n            \"userMoney\": 0\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/manager/login/getMailCode?mailCode=11@",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"manager",
+								"login",
+								"getMailCode"
+							],
+							"query": [
+								{
+									"key": "mailCode",
+									"value": "11@"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "用户订单管理",
+			"item": [
+				{
+					"name": "/member/order/getListByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getListByUser?id=1&pageindex=0&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getListByUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order /getListByPro",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getListByPro?id=1&pageindex=0&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getListByPro"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/ order /getListSearch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getListSearch?pageindex=0&pagesize=20&consignee&status=0&orderNumber&username&timeBe&timeEn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getListSearch"
+							],
+							"query": [
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "20"
+								},
+								{
+									"key": "consignee",
+									"value": null
+								},
+								{
+									"key": "status",
+									"value": "0"
+								},
+								{
+									"key": "orderNumber",
+									"value": null
+								},
+								{
+									"key": "username",
+									"value": null
+								},
+								{
+									"key": "timeBe",
+									"value": null
+								},
+								{
+									"key": "timeEn",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/ order /getDetailListByOrderId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getDetailListByOrderId?orderId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getDetailListByOrderId"
+							],
+							"query": [
+								{
+									"key": "orderId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/ order /getDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getDetail?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getDetail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/ order /modifyOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": 1,\n    \"consigneeName\": \"nameq\",\n    \"consigneePhone\": \"13978652345\",\n    \"postalCode\": 111100,\n    \"state\": \"jaja\",\n    \"city\": \"nei\",\n    \"firstAddr\": \"fir\",\n    \"secondAddr\": \"sen\",\n    \"expressNumber\": \"62151212151551\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/modifyOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"modifyOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member/order /modifyPro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/modifyPro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"modifyPro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/ order /modifyOrderStatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\":1,\n\t\"status\":2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/modifyOrderStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"modifyOrderStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/ order /modifyProStatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"orderDetailId\":1, \r\n\t\"status\":2\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/modifyProStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"modifyProStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/getCountWeekOrYear",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getCountWeekOrYear?type=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getCountWeekOrYear"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/ order/ getCountForOnePro",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getCountForOnePro?type=7&proId=1111",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getCountForOnePro"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "7"
+								},
+								{
+									"key": "proId",
+									"value": "1111"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/getCountForOneClass",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getCountForOneClass?cateId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getCountForOneClass"
+							],
+							"query": [
+								{
+									"key": "cateId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/getCountClassForOneGood",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getCountClassForOneGood?cateId=0&pageindex=0&pagesize=5&timeBe=2017-01-01&timeEn=2019-04-19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getCountClassForOneGood"
+							],
+							"query": [
+								{
+									"key": "cateId",
+									"value": "0"
+								},
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "5"
+								},
+								{
+									"key": "timeBe",
+									"value": "2017-01-01"
+								},
+								{
+									"key": "timeEn",
+									"value": "2019-04-19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/getOrderStatus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/order/getOrderStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"order",
+								"getOrderStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "退货管理",
+			"item": [
+				{
+					"name": "/orderReturn/getListByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/orderReturn/getListByUser?id=1&pageindex=0&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"orderReturn",
+								"getListByUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/orderReturn/ getListByStatus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/orderReturn/getListByStatus?status=1&pageindex=0&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"orderReturn",
+								"getListByStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "1"
+								},
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/orderReturn/ getListByOrderId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/orderReturn/getListByOrderId?id=1&pageindex=0&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"orderReturn",
+								"getListByOrderId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/orderReturn/ getListByReturnType",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/orderReturn/getListByReturnType?type=1&pageindex=0&pagesize=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"orderReturn",
+								"getListByReturnType"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "1"
+								},
+								{
+									"key": "pageindex",
+									"value": "0"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/orderReturn/getReturnType",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/member/orderReturn/getReturnType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"member",
+								"orderReturn",
+								"getReturnType"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "公共参数",
+			"item": [
+				{
+					"name": "/comm /discount/get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/comm/discount/get?category=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"comm",
+								"discount",
+								"get"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/comm/discount/modify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\": 0,\n    \"discountRate\": 1,\n    \"sellerDiscountRate\": 1,\n    \"yieldRate\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/comm/discount/modify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"comm",
+								"discount",
+								"modify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取系统运行信息",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/comm/sysInfo/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"comm",
+								"sysInfo",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "对账信息",
+			"item": [
+				{
+					"name": "/comm /discount/get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshopDM/comm/discount/get?category=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshopDM",
+								"comm",
+								"discount",
+								"get"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "更新数据缓存数据库数据",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shareshopDM/pro/info/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shareshopDM",
+						"pro",
+						"info",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

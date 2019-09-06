@@ -1,0 +1,1496 @@
+{
+	"info": {
+		"_postman_id": "1681dd1d-eada-46f8-a8d5-08a90f21a33e",
+		"name": "商城前台接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户信息",
+			"item": [
+				{
+					"name": "用户登录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"mode\":1,\n\t\"username\":\"chencheng\",\n\t\"password\":\"123456\",\n\t\"device\":\"1111111111111\",\n\t\"code\":\"111111\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/login/in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"login",
+								"in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"该字段存放推荐者信息，不是推荐注册存null\",\n    \"phoneNumber\": \"206612011213\",\n    \"email\": \"201912211423@gmai.com\",\n    \"userLogin\": {\n        \"username\": \"chencheng\",\n        \"password\": \"123456\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/login/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"login",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member/info/getDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "chenchengq=my_rRJE++QPqlYboSz/42QYMQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/info/getDetail?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"info",
+								"getDetail"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/modify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tom\",\r\n    \"identityCardType\": 1,\r\n    \"identityCardNo\": \"4682911111112\",\r\n    \"gender\": \"male\",\r\n    \"birthday\": \"2001-01-01\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/info/modify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"info",
+								"modify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/modifyPhone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNew\": \"12343252345\",\r\n    \"verify\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/info/modifyPhone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"info",
+								"modifyPhone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/modifyEmail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailNew\":\"123456@qqs.com\",\r\n    \"verify\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/info/modifyEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"info",
+								"modifyEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/modifyPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"passwordOld\":\"123456\",\r\n    \"passwordNew\":\"123456\",\r\n    \"verify\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/info/modifyPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"info",
+								"modifyPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登出",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "chenchengq=my_8FzqyrQ20ptp6UAlmH2/EQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/login/out?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"login",
+								"out"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/info/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"info",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/getListBySeller",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/info/getListBySeller",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"info",
+								"getListBySeller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/info/getCountAWeek",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/info/getCountAWeek",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"info",
+								"getCountAWeek"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "收货地址管理",
+			"item": [
+				{
+					"name": "member/info/getDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/address/getListByUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"address",
+								"getListByUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/address/modify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userAddrId\": 4,\n    \"userId\": 79,\n    \"consigneeName\": \"chenchrn\",\n    \"postalCode\": 4343,\n    \"phone\": \"4354453\",\n    \"state\": \"43\",\n    \"city\": \"43\",\n    \"firstAddr\": \"4343\",\n    \"secondAddr\": \"4343\",\n    \"isDefault\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/address/modify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"address",
+								"modify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/address/add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"consigneeName\": \"chenchrn11\",\n    \"postalCode\": 123,\n    \"phone\": \"123\",\n    \"state\": \"123\",\n    \"city\": \"123\",\n    \"firstAddr\": \"123\",\n    \"secondAddr\": \"123\",\n    \"isDefault\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/address/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"address",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/address/getListState",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/address/getListState",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"address",
+								"getListState"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/address/getListCity",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/address/getListCity?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"address",
+								"getListCity"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/address/delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userAddrId\": 5\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/address/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"address",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "推荐",
+			"item": [
+				{
+					"name": "/pro/recomm/detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/pro/recomm/detail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"pro",
+								"recomm",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pro/recomm/ search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/pro/recomm/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"pro",
+								"recomm",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pro/recomm/shopcart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/pro/recomm/shopcart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"pro",
+								"recomm",
+								"shopcart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pro/recomm/recomm",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/pro/recomm/recomm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"pro",
+								"recomm",
+								"recomm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "购物车信息管理",
+			"item": [
+				{
+					"name": "/member/shopcart/getListByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/shopcart/getListByUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"shopcart",
+								"getListByUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/shopcart/add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 0,\r\n    \"productSpecsId\": 2,\r\n    \"productQuantity\": 2\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/shopcart/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"shopcart",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/shopcart/getAmountById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/shopcart/getAmountById?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"shopcart",
+								"getAmountById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/shopcart/modify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cartId\": 3,\r\n    \"productSpecsId\": 2,\r\n    \"productQuantity\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/shopcart/modify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"shopcart",
+								"modify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/shopcart/delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cartId\": 3\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/shopcart/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"shopcart",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "用户收藏管理",
+			"item": [
+				{
+					"name": "/member/collect/getListByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/collect/getListByUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"collect",
+								"getListByUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/collect/getAmountById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/collect/getAmountById?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"collect",
+								"getAmountById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/collect/add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"productId\": 2\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/collect/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"collect",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/collect/delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"collectId\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/collect/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"collect",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "订单管理",
+			"item": [
+				{
+					"name": "/member/order/getListByStatus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "chenchengq=my_bs7UTFtkUvN7kTIIau2s3g==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/order/getListByStatus?status=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"order",
+								"getListByStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"addrId\": 4,\r\n\t\"coupon\":{\r\n\t\t\"couponId\":1\r\n\t},\r\n\t\"products\":[\r\n\t\t{\r\n\t\t\t\"specsId\":1,\r\n\t\t\t\"quantity\":1\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"specsId\":5,\r\n\t\t\t\"quantity\":3\r\n\t\t}\r\n\t]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/order/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"order",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/getDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/order/getDetail?id=25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"order",
+								"getDetail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/modifyOrderStatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"orderId\":25,\r\n\t\"status\":2\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/order/modifyOrderStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"order",
+								"modifyOrderStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/modifyProStatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"orderDetailId\":17, \r\n\t\"status\":2\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/order/modifyProStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"order",
+								"modifyProStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/getRecord",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "chenchengq=my_bs7UTFtkUvN7kTIIau2s3g==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/order/getRecord",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"order",
+								"getRecord"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"orderId\":25\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/order/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"order",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/order/modifyPay",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"orderId\": 25\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/order/modifyPay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"order",
+								"modifyPay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "退货管理",
+			"item": [
+				{
+					"name": "/member/order/getListByStatus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "chenchengq=my_bs7UTFtkUvN7kTIIau2s3g==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/order/getListByStatus?status=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"order",
+								"getListByStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/member/orderReturn/addReturn",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"orderDetailId\": 4,\r\n\t\"returnMoney\": 18,\r\n\t\"reason\": \"不想要了\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/shareshop/member/orderReturn/addReturn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shareshop",
+								"member",
+								"orderReturn",
+								"addReturn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
